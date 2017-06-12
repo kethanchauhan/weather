@@ -1,0 +1,318 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.FiveDays"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/forecast_padding">
+
+            <ImageView
+                android:id="@+id/f_status_img1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/weather"
+                android:layout_margin="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <custom.RobotoTextView
+                    android:id="@+id/f_date1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:text="Today" />
+
+                <custom.RobotoTextView
+                    android:id="@+id/f_status1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:textColor="#000"
+                    android:text="Today" />
+
+            </LinearLayout>
+
+            <custom.RobotoTextView
+                android:id="@+id/f_temp1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="92dp"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="#000"
+                android:text="40/20" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/forecast_padding">
+
+            <ImageView
+                android:id="@+id/f_status_img2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/weather"
+                android:layout_margin="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <custom.RobotoTextView
+                    android:id="@+id/f_date2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:text="Today" />
+
+                <custom.RobotoTextView
+                    android:id="@+id/f_status2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:textColor="#000"
+                    android:text="Today" />
+
+            </LinearLayout>
+
+            <custom.RobotoTextView
+                android:id="@+id/f_temp2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="92dp"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="#000"
+                android:text="40/20" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/forecast_padding">
+
+            <ImageView
+                android:id="@+id/f_status_img3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/weather"
+                android:layout_margin="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <custom.RobotoTextView
+                    android:id="@+id/f_date3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:text="Today" />
+
+                <custom.RobotoTextView
+                    android:id="@+id/f_status3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:textColor="#000"
+                    android:text="Today" />
+
+            </LinearLayout>
+
+            <custom.RobotoTextView
+                android:id="@+id/f_temp3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="92dp"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="#000"
+                android:text="40/20" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/forecast_padding">
+
+            <ImageView
+                android:id="@+id/f_status_img4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/weather"
+                android:layout_margin="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <custom.RobotoTextView
+                    android:id="@+id/f_date4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:text="Today" />
+
+                <custom.RobotoTextView
+                    android:id="@+id/f_status4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:textColor="#000"
+                    android:text="Today" />
+
+            </LinearLayout>
+
+            <custom.RobotoTextView
+                android:id="@+id/f_temp4"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="92dp"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="#000"
+                android:text="40/20" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/forecast_padding">
+
+            <ImageView
+                android:id="@+id/f_status_img5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/weather"
+                android:layout_margin="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <custom.RobotoTextView
+                    android:id="@+id/f_date5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:text="Today" />
+
+                <custom.RobotoTextView
+                    android:id="@+id/f_status5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:textColor="#000"
+                    android:text="Today" />
+
+            </LinearLayout>
+
+            <custom.RobotoTextView
+                android:id="@+id/f_temp5"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="92dp"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="#000"
+                android:text="40/20" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/kethan/Desktop/WeatherApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="cb1ee52ded94c6fd5ad6a4d5bcb62e3261a61f69">
+        <dex dex="/home/kethan/Desktop/WeatherApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ceb6cd55464e724ac84520912f4bbd6649b5ddfe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kethan/Desktop/WeatherApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/kethan/Desktop/WeatherApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_ead88b78836b5fc2a965848f7c686c44ed0b5cd9/classes.dex" />
+    </item>
+
+</items>
