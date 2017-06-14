@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="pugnotification-1.8.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/23b3023333be845daea4c8d6f09c7cd3bdcb932c/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/23b3023333be845daea4c8d6f09c7cd3bdcb932c/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.halysongoncalves/pugnotification/1.8.1/1afa8ef16042cfd60f4499e548f48a83bbabc467/pugnotification-1.8.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

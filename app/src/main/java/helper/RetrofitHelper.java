@@ -5,9 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by deepaksharma on 20/07/16.
- */
+
 public class RetrofitHelper<T> {
 
     public T getApi(Class<T> tClass){

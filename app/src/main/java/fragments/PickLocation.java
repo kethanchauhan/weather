@@ -39,8 +39,6 @@ public class PickLocation extends Fragment {
         rootview=inflater.inflate(R.layout.fragment_pick_location,container,false);
         pick =(Button) rootview.findViewById(R.id.pick_location);
         pick.setOnClickListener(pickListener);
-
-        place1= (TextView) rootview.findViewById(R.id.place);
         return rootview;
     }
 
@@ -67,11 +65,12 @@ public class PickLocation extends Fragment {
                 place =   PlacePicker.getPlace(data,getActivity());
                 latitude = place.getLatLng().latitude;
                 longitude = place.getLatLng().longitude;
-                place1.setText(latitude.toString());
                 Bundle bundle = new Bundle();
                 bundle.putString("lat",  latitude.toString());
                 bundle.putString("lon", longitude.toString());
                 ((MainActivity)getActivity()).selectItem(MainActivity.HOME,bundle);
+                FiveDays.lat=latitude.toString();
+                FiveDays.lon=longitude.toString();
             }
         }
     }

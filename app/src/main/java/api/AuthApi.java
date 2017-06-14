@@ -3,6 +3,7 @@ package api;
 
 import java.util.List;
 
+import pojo.Main;
 import pojo.MainData;
 import pojo.ResultObject;
 import pojo.ResultObject1;
@@ -16,7 +17,7 @@ public interface AuthApi {
 //    http://api.openweathermap.org/data/2.5/weather?lat=19&lon=72&units=metric&APPID=dcae12cb0488a2a684320828b6e1acc3
 
     @GET("weather")
-    Call<ResultObject> currentData(
+    Call<ResultObject<Main>> currentData(
             @Query("lat") String lat,
             @Query("lon") String lon,
             @Query("units") String units,

@@ -31,6 +31,8 @@ import retrofit2.Response;
 
 public class FiveDays extends Fragment {
 
+    public static String lat="0",lon="0";
+
     private View rootview;
     private ProgressDialog pd;
     private AuthApi mApi;
@@ -38,7 +40,6 @@ public class FiveDays extends Fragment {
     private Call<ResultObject1<List<MainData>>> forecastCall;
     private TextView f_date1,f_date2,f_date3,f_date4,f_date5,f_status1,f_status2,f_status3,f_status4,f_status5,location;
     private TextView f_temp1,f_temp2,f_temp3,f_temp4,f_temp5;
-    private String lat,lon;
     private String units="metric";
 
     @Override
@@ -64,12 +65,6 @@ public class FiveDays extends Fragment {
         f_date4= (TextView) rootview.findViewById(R.id.f_date4);
         f_date5= (TextView) rootview.findViewById(R.id.f_date5);
 
-
-        Bundle bundle = this.getArguments();
-        if (bundle != null) {
-            lat= bundle.getString("lat", "0");
-            lon=bundle.getString("lon","0");
-        }
         loadData(lat,lon);
         return rootview;
     }

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="rangebar-1.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/b43fedf285409e0341143fcda9d3ebc0bccc05ec/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/b43fedf285409e0341143fcda9d3ebc0bccc05ec/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

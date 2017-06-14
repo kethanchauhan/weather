@@ -15,6 +15,7 @@ import com.example.kethan.weatherapp.R;
 
 import api.AuthApi;
 import helper.RetrofitHelper;
+import pojo.Main;
 import pojo.MainData;
 import pojo.ResultObject;
 import retrofit2.Call;
@@ -29,7 +30,7 @@ public class Home extends Fragment {
     private View rootview;
     private ProgressDialog pd;
     private AuthApi mApi;
-    private Call<ResultObject> currentCall;
+    private Call<ResultObject<Main>> currentCall;
     private TextView temp_current,status_current,location;
 
     public static TextView temp_today,temp_tomorrow;
@@ -38,7 +39,7 @@ public class Home extends Fragment {
     private String lat,lon;
     private String geo;
     private String units="metric";
-    private ResultObject mData= new ResultObject();
+    private ResultObject<Main> mData= new ResultObject<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -78,12 +79,12 @@ public class Home extends Fragment {
 
         currentCall = mApi.currentData(lat,lon,units,key);
 
-        currentCall.enqueue(new Callback<ResultObject>() {
+        currentCall.enqueue(new Callback<ResultObject<Main>>() {
             @Override
-            public void onResponse(Call<ResultObject> call,
-                                   Response<ResultObject> response) {
+            public void onResponse(Call<ResultObject<Main>> call,
+                                   Response<ResultObject<Main>> response) {
 
-                //Log.d("enter","enter");
+                Log.d("enter","enter");
                 //Log.d("temp",new Integer(response.body().getMain().getTemp()).toString());
                 mData=response.body();
                 temp_current.setText(mData.getMain().getTemp());
@@ -94,8 +95,8 @@ public class Home extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<ResultObject> call, Throwable t) {
-                Log.d("enterf","enterf");
+            public void onFailure(Call<ResultObject<Main>> call, Throwable t) {
+                Log.d("enterf",Log.getStackTraceString(new Exception()));
                 pd.hide();
 
             }
