@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitHelper<T> {
 
     public T getApi(Class<T> tClass){
-        return getApi(tClass, QuickPreferences.BASE_URL);
+        return getApi(tClass,  "http://api.openweathermap.org/data/2.5/");
     }
 
     public T getApi(Class<T> tClass, String URL){

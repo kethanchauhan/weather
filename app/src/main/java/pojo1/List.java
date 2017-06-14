@@ -1,10 +1,5 @@
 package pojo1;
 
-import pojo1.Clouds;
-import pojo1.Main;
-import pojo1.Sys;
-import pojo1.Weather;
-import pojo1.Wind;
 
 public class List
 {

@@ -81,9 +81,9 @@ public class FiveDays extends Fragment {
                 //Log.d("temp",new Integer(response.body().getMain().getTemp()).toString());
                // temp_current.setText(new Integer(response.body().gelist().getTemp()).toString());
 
-               /* mData=response.body();
-                f_temp1.setText(mdata.);
-                Home.temp_today.setText(mData.get(0).getMain().gettemp_max()+"/"+mData.get(0).getMain().getTemp_min());
+               mData=response.body();
+                //f_temp1.setText(mData.getList().ge);
+               /* Home.temp_today.setText(mData.get(0).getMain().gettemp_max()+"/"+mData.get(0).getMain().getTemp_min());
                 f_temp2.setText(mData.get(1).getMain().gettemp_max()+"/"+mData.get(1).getMain().getTemp_min());
                 Home.temp_tomorrow.setText(mData.get(1).getMain().gettemp_max()+"/"+mData.get(1).getMain().getTemp_min());
                 f_temp3.setText(mData.get(2).getMain().gettemp_max()+"/"+mData.get(2).getMain().getTemp_min());
