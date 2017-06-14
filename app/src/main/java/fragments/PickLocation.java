@@ -65,12 +65,17 @@ public class PickLocation extends Fragment {
                 place =   PlacePicker.getPlace(data,getActivity());
                 latitude = place.getLatLng().latitude;
                 longitude = place.getLatLng().longitude;
+
+                Home.lat=latitude.toString();
+                Home.lon=longitude.toString();
+                FiveDays.lat=latitude.toString();
+                FiveDays.lon=longitude.toString();
+
                 Bundle bundle = new Bundle();
                 bundle.putString("lat",  latitude.toString());
                 bundle.putString("lon", longitude.toString());
-                ((MainActivity)getActivity()).selectItem(MainActivity.HOME,bundle);
-                FiveDays.lat=latitude.toString();
-                FiveDays.lon=longitude.toString();
+                ((MainActivity)getActivity()).selectItem(MainActivity.FIVE_DAY_FORECAST,bundle);
+
             }
         }
     }

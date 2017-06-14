@@ -1,63 +1,73 @@
 package pojo;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
-/**
- * Created by kethan on 12/6/17.
- */
+public class ResultObject1
+{
+    private String message;
 
-public class ResultObject1<T> {
-    @Expose
-    @SerializedName("message")
-    public String message;
+    private String cnt;
 
-    @Expose
-    @SerializedName("result")
-    public int result;
+    private String cod;
 
-    @Expose
-    @SerializedName("errors")
-    public List<String> errors;
+    private List[] list;
 
-    @Expose
-    @SerializedName("list")
-    public T list;
+    private City city;
 
-
-    public T getList() {
-        return list;
-    }
-
-    public void setList(T list) {
-        this.list = list;
-    }
-
-
-    public List<String> getErrors() {
-        return errors;
-    }
-
-    public void setErrors(List<String> errors) {
-        this.errors = errors;
-    }
-
-
-    public String getMessage() {
+    public String getMessage ()
+    {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage (String message)
+    {
         this.message = message;
     }
 
-    public int getResult() {
-        return result;
+    public String getCnt ()
+    {
+        return cnt;
     }
 
-    public void setResult(int result) {
-        this.result = result;
+    public void setCnt (String cnt)
+    {
+        this.cnt = cnt;
+    }
+
+    public String getCod ()
+    {
+        return cod;
+    }
+
+    public void setCod (String cod)
+    {
+        this.cod = cod;
+    }
+
+    public List[] getList ()
+    {
+        return list;
+    }
+
+    public void setList (List[] list)
+    {
+        this.list = list;
+    }
+
+    public City getCity ()
+    {
+        return city;
+    }
+
+    public void setCity (City city)
+    {
+        this.city = city;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "ClassPojo [message = "+message+", cnt = "+cnt+", cod = "+cod+", list = "+list+", city = "+city+"]";
     }
 }
+

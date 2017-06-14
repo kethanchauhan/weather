@@ -1,66 +1,156 @@
 package pojo;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+public class ResultObject
+{
+    private String id;
 
+    private String dt;
 
-public class ResultObject<T> {
+    private Clouds clouds;
 
-    @Expose
-    @SerializedName("name")
-    public String name;
+    private Coord coord;
 
+    private Wind wind;
 
-    @Expose
-    @SerializedName("id")
-    public int id;
+    private String cod;
 
-    @Expose
-    @SerializedName("cod")
-    public int cod;
+    private String visibility;
 
+    private Sys sys;
 
-    @Expose
-    @SerializedName("dt")
-    public long dt;
+    private String name;
 
-    @Expose
-    @SerializedName("visibility")
-    public int visibility;
+    private String base;
 
-    @Expose
-    @SerializedName("base")
-    public String base;
+    private Weather[] weather;
 
-    @Expose
-    @SerializedName("main")
-    public T main;
+    private Main main;
 
-    public T getMain() {
-        return main;
+    public String getId ()
+    {
+        return id;
     }
 
-    @Expose
-    @SerializedName("weather")
-    public Weather weather;
-
-    public class Weather{
-
-        @Expose
-        @SerializedName("description")
-        public String description;
-
-        public String getDescription() {
-            return description;
-        }
-
-        public void setDescription(String description) {
-            this.description = description;
-        }
+    public void setId (String id)
+    {
+        this.id = id;
     }
 
-    public Weather getWeather() {
+    public String getDt ()
+    {
+        return dt;
+    }
+
+    public void setDt (String dt)
+    {
+        this.dt = dt;
+    }
+
+    public Clouds getClouds ()
+    {
+        return clouds;
+    }
+
+    public void setClouds (Clouds clouds)
+    {
+        this.clouds = clouds;
+    }
+
+    public Coord getCoord ()
+    {
+        return coord;
+    }
+
+    public void setCoord (Coord coord)
+    {
+        this.coord = coord;
+    }
+
+    public Wind getWind ()
+    {
+        return wind;
+    }
+
+    public void setWind (Wind wind)
+    {
+        this.wind = wind;
+    }
+
+    public String getCod ()
+    {
+        return cod;
+    }
+
+    public void setCod (String cod)
+    {
+        this.cod = cod;
+    }
+
+    public String getVisibility ()
+    {
+        return visibility;
+    }
+
+    public void setVisibility (String visibility)
+    {
+        this.visibility = visibility;
+    }
+
+    public Sys getSys ()
+    {
+        return sys;
+    }
+
+    public void setSys (Sys sys)
+    {
+        this.sys = sys;
+    }
+
+    public String getName ()
+    {
+        return name;
+    }
+
+    public void setName (String name)
+    {
+        this.name = name;
+    }
+
+    public String getBase ()
+    {
+        return base;
+    }
+
+    public void setBase (String base)
+    {
+        this.base = base;
+    }
+
+    public Weather[] getWeather ()
+    {
         return weather;
     }
 
+    public void setWeather (Weather[] weather)
+    {
+        this.weather = weather;
+    }
+
+    public Main getMain ()
+    {
+        return main;
+    }
+
+    public void setMain (Main main)
+    {
+        this.main = main;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "ClassPojo [id = "+id+", dt = "+dt+", clouds = "+clouds+", coord = "+coord+", wind = "+wind+", cod = "+cod+", visibility = "+visibility+", sys = "+sys+", name = "+name+", base = "+base+", weather = "+weather+", main = "+main+"]";
+    }
 }
+
+

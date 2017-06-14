@@ -36,8 +36,8 @@ public class FiveDays extends Fragment {
     private View rootview;
     private ProgressDialog pd;
     private AuthApi mApi;
-    private List<MainData> mData = new ArrayList<>();
-    private Call<ResultObject1<List<MainData>>> forecastCall;
+    private ResultObject1 mData = new ResultObject1();
+    private Call<ResultObject1> forecastCall;
     private TextView f_date1,f_date2,f_date3,f_date4,f_date5,f_status1,f_status2,f_status3,f_status4,f_status5,location;
     private TextView f_temp1,f_temp2,f_temp3,f_temp4,f_temp5;
     private String units="metric";
@@ -78,17 +78,17 @@ public class FiveDays extends Fragment {
 
         forecastCall = mApi.forecastData(lat,lon,units,Home.key);
 
-        forecastCall.enqueue(new Callback<ResultObject1<List<MainData>>>() {
+        forecastCall.enqueue(new Callback<ResultObject1>() {
             @Override
-            public void onResponse(Call<ResultObject1<List<MainData>>> call,
-                                   Response<ResultObject1<List<MainData>>> response) {
+            public void onResponse(Call<ResultObject1> call,
+                                   Response<ResultObject1> response) {
 
-                //Log.d("enter","enter");
+                Log.d("enter","enter");
                 //Log.d("temp",new Integer(response.body().getMain().getTemp()).toString());
                // temp_current.setText(new Integer(response.body().gelist().getTemp()).toString());
 
-                mData=response.body().getList();
-                f_temp1.setText(mData.get(0).getMain().gettemp_max()+"/"+mData.get(0).getMain().getTemp_min());
+               /* mData=response.body();
+                f_temp1.setText(mdata.);
                 Home.temp_today.setText(mData.get(0).getMain().gettemp_max()+"/"+mData.get(0).getMain().getTemp_min());
                 f_temp2.setText(mData.get(1).getMain().gettemp_max()+"/"+mData.get(1).getMain().getTemp_min());
                 Home.temp_tomorrow.setText(mData.get(1).getMain().gettemp_max()+"/"+mData.get(1).getMain().getTemp_min());
@@ -110,14 +110,14 @@ public class FiveDays extends Fragment {
                 f_date2.setText(Date(mData.get(1).getDt()));
                 f_date3.setText(Date(mData.get(2).getDt()));
                 f_date4.setText(Date(mData.get(3).getDt()));
-                f_date5.setText(Date(mData.get(4).getDt()));
+                f_date5.setText(Date(mData.get(4).getDt()));*/
 
 
                 pd.hide();
             }
 
             @Override
-            public void onFailure(Call<ResultObject1<List<MainData>>> call, Throwable t) {
+            public void onFailure(Call<ResultObject1> call, Throwable t) {
                 Log.d("enterf","enterf");
                 pd.hide();
             }

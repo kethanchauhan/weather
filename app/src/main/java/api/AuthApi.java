@@ -17,7 +17,7 @@ public interface AuthApi {
 //    http://api.openweathermap.org/data/2.5/weather?lat=19&lon=72&units=metric&APPID=dcae12cb0488a2a684320828b6e1acc3
 
     @GET("weather")
-    Call<ResultObject<Main>> currentData(
+    Call<ResultObject> currentData(
             @Query("lat") String lat,
             @Query("lon") String lon,
             @Query("units") String units,
@@ -25,7 +25,7 @@ public interface AuthApi {
     );
 
     @GET("forecast")
-    Call<ResultObject1<List<MainData>>> forecastData(
+    Call<ResultObject1> forecastData(
             @Query("lat") String lat,
             @Query("lon") String lon,
             @Query("units") String units,

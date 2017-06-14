@@ -30,16 +30,16 @@ public class Home extends Fragment {
     private View rootview;
     private ProgressDialog pd;
     private AuthApi mApi;
-    private Call<ResultObject<Main>> currentCall;
+    private Call<ResultObject> currentCall;
     private TextView temp_current,status_current,location;
 
     public static TextView temp_today,temp_tomorrow;
     public static TextView status_today,status_tomorrow;
 
-    private String lat,lon;
+    public static String lat,lon;
     private String geo;
     private String units="metric";
-    private ResultObject<Main> mData= new ResultObject<>();
+    private ResultObject mData= new ResultObject();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -79,23 +79,22 @@ public class Home extends Fragment {
 
         currentCall = mApi.currentData(lat,lon,units,key);
 
-        currentCall.enqueue(new Callback<ResultObject<Main>>() {
+        currentCall.enqueue(new Callback<ResultObject>() {
             @Override
-            public void onResponse(Call<ResultObject<Main>> call,
-                                   Response<ResultObject<Main>> response) {
+            public void onResponse(Call<ResultObject> call,
+                                   Response<ResultObject> response) {
 
                 Log.d("enter","enter");
-                //Log.d("temp",new Integer(response.body().getMain().getTemp()).toString());
                 mData=response.body();
                 temp_current.setText(mData.getMain().getTemp());
-                status_current.setText(mData.getWeather().getDescription());
+                status_current.setText(mData.getWeather()[0].getDescription());
 
 
                 pd.hide();
             }
 
             @Override
-            public void onFailure(Call<ResultObject<Main>> call, Throwable t) {
+            public void onFailure(Call<ResultObject> call, Throwable t) {
                 Log.d("enterf",Log.getStackTraceString(new Exception()));
                 pd.hide();
 
