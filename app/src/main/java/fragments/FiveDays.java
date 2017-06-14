@@ -1,8 +1,6 @@
 package fragments;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -14,16 +12,12 @@ import android.widget.TextView;
 import com.example.kethan.weatherapp.R;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.TimeZone;
 
 import api.AuthApi;
 import helper.RetrofitHelper;
-import pojo.MainData;
-import pojo.ResultObject;
-import pojo.ResultObject1;
+import pojo1.ResultObject1;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

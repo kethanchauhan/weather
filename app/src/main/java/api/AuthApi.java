@@ -1,15 +1,10 @@
 package api;
 
 
-import java.util.List;
-
-import pojo.Main;
-import pojo.MainData;
 import pojo.ResultObject;
-import pojo.ResultObject1;
+import pojo1.ResultObject1;
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface AuthApi {

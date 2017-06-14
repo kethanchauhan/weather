@@ -24,7 +24,6 @@ public class PickLocation extends Fragment {
 
     private View rootview;
     private Button pick;
-    private TextView place1;
     private  Double latitude;
     private  Double longitude;
     private  Place place;
@@ -74,7 +73,7 @@ public class PickLocation extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putString("lat",  latitude.toString());
                 bundle.putString("lon", longitude.toString());
-                ((MainActivity)getActivity()).selectItem(MainActivity.FIVE_DAY_FORECAST,bundle);
+                ((MainActivity)getActivity()).selectItem(MainActivity.HOME,bundle);
 
             }
         }

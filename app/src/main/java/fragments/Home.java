@@ -9,7 +9,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.kethan.weatherapp.R;
 
@@ -32,6 +34,7 @@ public class Home extends Fragment {
     private AuthApi mApi;
     private Call<ResultObject> currentCall;
     private TextView temp_current,status_current,location;
+    private ImageView status_img_current;
 
     public static TextView temp_today,temp_tomorrow;
     public static TextView status_today,status_tomorrow;
@@ -48,6 +51,8 @@ public class Home extends Fragment {
 
         temp_current= (TextView) rootview.findViewById(R.id.temp_current);
         status_current= (TextView) rootview.findViewById(R.id.status_current);
+        location=(TextView) rootview.findViewById(R.id.location);
+        status_img_current=(ImageView) rootview.findViewById(R.id.status_img_current);
 
         temp_today= (TextView) rootview.findViewById(R.id.temp_today);
         temp_tomorrow=(TextView) rootview.findViewById(R.id.temp_tomorrow);
@@ -83,14 +88,22 @@ public class Home extends Fragment {
             @Override
             public void onResponse(Call<ResultObject> call,
                                    Response<ResultObject> response) {
-
-                Log.d("enter","enter");
-                mData=response.body();
-                temp_current.setText(mData.getMain().getTemp());
-                status_current.setText(mData.getWeather()[0].getDescription());
-
-
-                pd.hide();
+                if(response.code() == 200) {
+                    Log.d("enter", "enter");
+                    mData = response.body();
+                    temp_current.setText(mData.getMain().getTemp());
+                    status_current.setText(mData.getWeather()[0].getDescription());
+                   // status_img_current.setImageURI("http//openweathermap.org/img/w/10d.png"););
+                    location.setText(mData.getName());
+                    temp_today.setText(mData.getMain().getTemp_max()+"/"+mData.getMain().getTemp_min());
+                    status_today.setText(mData.getWeather()[0].getMain());
+                    pd.hide();
+                }
+                else{
+                    Toast.makeText(getActivity(),
+                            mData.getMessage(), Toast.LENGTH_SHORT)
+                            .show();
+                }
             }
 
             @Override

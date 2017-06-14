@@ -6,6 +6,8 @@ public class ResultObject
 
     private String dt;
 
+    private String message;
+
     private Clouds clouds;
 
     private Coord coord;
@@ -25,6 +27,14 @@ public class ResultObject
     private Weather[] weather;
 
     private Main main;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public String getId ()
     {
